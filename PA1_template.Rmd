@@ -1,12 +1,18 @@
 # Reproducible Research: Peer Assessment 1
 
 
+
 ## Loading and preprocessing the data
-
-
+```{r loading}
+raw.data <- read.csv("activity.csv")
+```
 
 ## What is mean total number of steps taken per day?
-
+```{r mean steps per day}
+hist(tapply(raw.data$steps, raw.data$date, sum, na.rm = TRUE))
+mean(tapply(raw.data$steps, raw.data$date, sum, na.rm = TRUE))
+median(tapply(raw.data$steps, raw.data$date, sum, na.rm = TRUE))
+```
 
 
 ## What is the average daily activity pattern?
