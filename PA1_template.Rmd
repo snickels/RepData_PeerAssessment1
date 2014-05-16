@@ -15,6 +15,7 @@ median(tapply(raw.data$steps, raw.data$date, sum, na.rm = TRUE))
 ```
 
 
+
 ## What is the average daily activity pattern?
 
 
